@@ -1,0 +1,22 @@
+{%   extends 'base/base_main.html' %}
+
+{% block extCSS %}
+    {{ super() }}
+{#        <link rel="stylesheet" href="{{ url_for('static',filename='app/market/css/market.css') }}">#}
+    <link rel="stylesheet" href="../../static/app/market/css/market.css">
+{% endblock %}
+
+{% block content %}
+    <div id="market">
+        <aside>
+            <ul>
+                {% for data in data[1] %}
+                    <li>
+                        <a href="#">{{ data.typename }}</a>
+                    </li>
+                {% endfor %}
+
+            </ul>
+        </aside>
+    </div>
+{% endblock %}
